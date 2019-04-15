@@ -11,3 +11,8 @@ HOSTCC=clang KBUILD_OUTPUT=build-dir
 
 Now `allyesconfig` is fine, except KASAN.
 
+
+------------
+
+Make sure enable `CONFIG_X86_INTEL_MPX` in the `.config` file. To enable the MPX ISs.
+
