@@ -182,7 +182,11 @@ mksysmap()
 
 sortextable()
 {
-	${objtree}/scripts/sortextable ${1}
+	# ${objtree}/scripts/sortextable ${1}  # Old version
+    # Compatible with shared folder.
+    cp ${1} /tmp/.${1}
+    scripts/sortextable /tmp/.${1}
+    cp /tmp/.${1} ${1}
 }
 
 # Delete output files in case of error
